@@ -19,23 +19,7 @@ const Screen1 = ({navigation}) => {
 
 
             <ImageBackground source={require('../../img/bg_logo.png')} style={styles.image}>
-                {/*<View style={{position: 'absolute', top: 0}}>*/}
-                {/*    <Image source={require('../../img/logo.png')} style={{resizeMode: 'contain', width: 150}}>*/}
-                {/*    </Image>*/}
-                {/*    <Text style={{*/}
-                {/*        position: 'absolute',*/}
-                {/*        top: 120,*/}
-                {/*        alignContent: 'space-around',*/}
-                {/*        fontSize: 16,*/}
-                {/*        color: 'white',*/}
-                {/*        lineHeight: 26,*/}
-                {/*        fontFamily: 'lucida grande',*/}
-                {/*        justifyContent: 'center',*/}
-                {/*        width: '100%',*/}
-                {/*    }}>*/}
-                {/*        Date, Chat & Meet*/}
-                {/*    </Text>*/}
-                {/*</View>*/}
+
                 <View style={signupstyle}>
                     <TouchableOpacity style={signtext} onPress={() => SIGNUP(navigation)}>
                         <Text style={{color: 'white', fontSize: 16, fontFamily: 'Roboto'}}>SIGN UP NOW</Text>

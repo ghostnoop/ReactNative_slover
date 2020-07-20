@@ -4,7 +4,6 @@ import {
     StyleSheet,
     Text,
     View,
-    Button,
     ImageBackground,
     TouchableOpacity,
     Image,
@@ -14,17 +13,17 @@ import {
     Dimensions,
     TouchableHighlight,
 } from 'react-native';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 import construct from '@babel/runtime/helpers/esm/construct';
 
 const NEXT = (navigation) => {
-    navigation.navigate('SCREEN_4');
+    navigation.navigate('SCREEN_5');
 };
 
 
 const Screen4 = ({navigation}) => {
 
-    const {container, textstyle, viewstyle, bgrArea, btntoch, signtext, nextstyle, datestyle, footer} = styles;
+    const {container, textstyle, viewstyle, bgrArea, btntoch, signtext, nextstyle, datestyle, iconstyle, footer} = styles;
 
     return (
 
@@ -47,28 +46,35 @@ const Screen4 = ({navigation}) => {
                 }}>Sign Up</Text>
 
                 <View style={[viewstyle, {top: 40}]}>
-                    <Text style={[textstyle,{paddingLeft:40}]}>When were you born?</Text>
+                    <Text style={[textstyle, {paddingLeft: 40}]}>When were you born?</Text>
                     <View style={{
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        paddingLeft:20,
-                        paddingRight:20,
+                        paddingLeft: 20,
+                        paddingRight: 20,
                         top: 50,
                     }}>
-                        <TouchableOpacity style={[btntoch]}>
-                            <Text style={datestyle}>Day</Text>
+                        <TouchableOpacity style={[btntoch, {alignItems: 'center'}]}>
+                            <Icon style={[iconstyle, {position: 'absolute', textAlign: 'center', top: 20, right: 10}]}
+                                  name="chevron-down" size={20} color="#900"/>
+                            <Text style={[{}, datestyle]}>Day</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[btntoch]}>
+                            <Icon style={[iconstyle, {position: 'absolute', textAlign: 'center', top: 20, right: 10}]}
+                                  name="chevron-down" size={20} color="#900"/>
                             <Text style={datestyle}>Month</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[btntoch]}>
+                            <Icon style={[iconstyle, {position: 'absolute', textAlign: 'center', top: 20, right: 10}]}
+                                  name="chevron-down" size={20} color="#900"/>
                             <Text style={datestyle}>Year</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
+
 
 
                 <View style={nextstyle}>
@@ -97,7 +103,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     btntoch: {
-        marginTop:10,
+        marginTop: 10,
         borderColor: 'white',
         borderWidth: 2,
         paddingTop: 16,
@@ -147,6 +153,10 @@ const styles = StyleSheet.create({
     datestyle: {
         color: 'white',
         fontSize: 16,
+    },
+    iconstyle: {
+        color: 'white',
+        fontSize: 13,
     },
     footer: {
 
